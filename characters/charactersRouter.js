@@ -17,4 +17,9 @@ router.get('/:id', (req, res) => {
     })
 });
 
+router.get('/:id/vehicles', (req, res) => {
+  const { id } = req.params;
+  Character.findById(id)
+})
+
 module.exports = router;
